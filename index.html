@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderna</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="icon" href="logo2.png">
+
+</head>
+<body>
+    <header>
+        
+        <div class="d-flex justify-content-center">
+        <img id="header" src="logo.png" alt="MODERNA" height="180">
+        </div>
+        
+
+    </header>
+  
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="logo2.png" width="40" height="40" alt="">
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <button id="kosik" type="button" class="btn btn-link" data-toggle="modal" data-target="#cartModal">Košík</button>
+            <button type="button" class="btn btn-link" onclick="openForm()">Přihlásit se</button>
+
+        </span>
+        </div>
+      </nav>
+
+      <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Košík
+              </h5>
+      
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="cart-container">
+              <ul>
+                <!-- This element will be populated with the items in the cart -->
+              </ul>
+            </div>
+            <div class="modal-footer border-top-0 d-flex justify-content-end">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavřít</button>
+              <button type="button" class="btn btn-secondary">Vysypat košík</button>
+              <button type="button" class="btn btn-success">K pokladně</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      
+
+
+    <div class="banner">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="3.png" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+</div>
+
+<h2 class="text-center">Top nabídka</h2>
+
+
+
+<div class="d-flex justify-content-center">
+  <div id="zdlms" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-6.00.38-PM.png" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Křeslo zdlms</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5 class="price">100Kč</h5>
+        <a onclick="addToCart('zdlms')" class="btn btn-primary">Do košíku</a>
+      </div>    </div>
+  </div>
+
+  <div id="produkt1" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-6.02.24-PM.png" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">TADY TADY</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5 class="price">100Kč</h5>
+        <a onclick="addToCart('produkt1')" class="btn btn-primary">Do košíku</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="kulkr" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-6.06.06-PM-1024x682.png" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Kulkr</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5 class="price">100Kč</h5>
+        <a id="kulkr" onclick="addToCart(this.id)" class="btn btn-primary">Do košíku</a>
+
+            
+            
+            </div>    </div>
+  </div>
+
+ 
+
+
+</div>
+
+
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://cdn.store-assets.com/s/1048187/i/47681985.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5>666Kč</h5>
+              <a href="#" class="btn btn-primary">Do košíku</a></div>    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-6.00.21-PM.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5>666Kč</h5>
+              <a href="#" class="btn btn-primary">Do košíku</a></div>    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-5.58.27-PM-1024x692.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5>666Kč</h5>
+              <a href="#" class="btn btn-primary">Do košíku</a></div>    </div>
+  </div>
+
+ 
+
+
+</div>
+
+
+
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-5.58.15-PM-1024x737.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5>666Kč</h5>
+              <a href="#" class="btn btn-primary">Do košíku</a></div>    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-5.55.56-PM-1068x1111.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5>666Kč</h5>
+              <a href="#" class="btn btn-primary">Do košíku</a></div>    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://indie88.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-13-at-5.51.48-PM-1024x638.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-between">
+        <h5>666Kč</h5>
+              <a href="#" class="btn btn-primary">Do košíku</a></div>    </div>
+  </div>
+
+ 
+
+
+</div>
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+<img src="logo.png" height="80px">    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>
+
+<script>
+
+  function openForm() {
+    window.scrollTo(0, 305);
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/vendor/holder.min.js"></script>
+<script>
+  Holder.addTheme('thumb', {
+    bg: '#55595c',
+    fg: '#eceeef',
+    text: 'Thumbnail'
+  });
+
+</script>
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCgSuc28wpLz0znZLGAVsmyDM0ANviIHkA",
+    authDomain: "eshop-moderna.firebaseapp.com",
+    projectId: "eshop-moderna",
+    storageBucket: "eshop-moderna.appspot.com",
+    messagingSenderId: "817901728701",
+    appId: "1:817901728701:web:dfcd20955fe08db91858d4",
+    measurementId: "G-MHBX9RN8LK"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<script>
+  //function addToCart() {
+   // const productName = document.querySelector('#zdlms h4').textContent;
+   // const productPrice = document.querySelector('#zdlms h5').textContent;
+   // console.log(`${productName},${productPrice}`);
+
+
+   let cart = [];
+let totalPrice = 0;
+
+function addToCart(productId) {
+  const productName = document.querySelector(`#${productId} .card-title`).textContent;
+  const productPrice = parseFloat(document.querySelector(`#${productId} .price`).textContent);
+  
+  let item = cart.find(item => item.name === productName);
+  if (item) {
+    item.quantity++;
+    item.price += productPrice;
+  } else {
+    item = { name: productName, quantity: 1, price: productPrice };
+    cart.push(item);
+  }
+  
+  totalPrice += productPrice; // add the price of the current item to the total price
+  
+  console.log(`Product: ${productName}, Price: ${productPrice}`);
+  console.log(`Cart: ${JSON.stringify(cart)}`);
+  console.log(`Total price: ${totalPrice}`);
+
+document.getElementById("product").innerHTML = `Product: ${productName}, Price: ${productPrice}`;
+document.getElementById("cart").innerHTML = `Cart: ${JSON.stringify(cart)}`;
+document.getElementById("total-price").innerHTML = `Total price: ${totalPrice}`;
+
+
+
+  
+  // Update the cart badge to show the total number of unique items
+  const uniqueItemCount = cart.length;
+  const badge = document.querySelector('#cart .badge');
+  badge.textContent = uniqueItemCount;
+}
+
+
+
+  
+</script>
+
+<script>
+  $(document).ready(function() {  
+  $('#cartModal').modal('show');
+});
+</script>
+
+
+
+
+  
+
+
+</body>
+</html>
